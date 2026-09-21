@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Busannn26 🌊 釜山之旅</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: 童趣手写字体 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Gowun+Dodum&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            oceanSky: '#38bdf8',
+            oceanBlue: '#0284c7',
+            sunsetPink: '#f43f5e',
+            sunsetOrange: '#fb923c',
+            warmSand: '#fff7ed',
+            pastelYellow: '#fef08a'
+          },
+          fontFamily: {
+            hand: ['Gaegu', 'cursive'],
+            body: ['Gowun Dodum', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Gaegu', 'Gowun Dodum', cursive, sans-serif;
+      background: linear-gradient(180deg, #e0f2fe 0%, #fff7ed 50%, #fef3c7 100%);
+      min-height: 100vh;
+    }
+    .crayon-border {
+      border: 3px solid #0284c7;
+      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    }
+    .crayon-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      box-shadow: 4px 4px 0px #fb923c;
+      border: 2px solid #38bdf8;
+      border-radius: 16px;
+    }
+    .tab-btn.active {
+      background-color: #fb923c;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 2px 4px 0px #c2410c;
+    }
+  </style>
+</head>
+<body class="pb-24 text-slate-800">
+
+  <!-- Header Header Header -->
+  <header class="bg-sky-400/90 text-white p-4 sticky top-0 z-50 backdrop-blur-md shadow-md border-b-4 border-orange-300">
+    <div class="max-w-md mx-auto flex justify-between items-center">
+      <h1 class="text-3xl font-bold tracking-wider flex items-center gap-2">
+        <span>🌊 Busannn26</span>
+        <span class="text-xs bg-orange-400 px-2 py-0.5 rounded-full text-white">10.06 - 10.10</span>
+      </h1>
+      <div class="text-sm font-semibold bg-white/20 px-3 py-1 rounded-full">
+        <i class="fa-solid fa-umbrella-beach"></i> 釜山手帳
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="max-w-md mx-auto p-4 space-y-6">
+
+    <!-- 1. 首頁 (HOME) -->
+    <section id="page-home" class="page-content space-y-4">
+      <!-- 天氣資訊卡 -->
+      <div class="crayon-card p-4 relative overflow-hidden">
+        <div class="flex justify-between items-center mb-2">
+          <h2 class="text-2xl font-bold text-sky-700"><i class="fa-solid fa-cloud-sun text-orange-400"></i> 釜山即時天氣 (기상청)</h2>
+          <a href="https://www.kma.go.kr" target="_blank" class="text-xs text-sky-600 underline">氣象廳官網</a>
+        </div>
+        <div class="grid grid-cols-2 gap-2 text-center bg-sky-50/80 p-3 rounded-xl border border-sky-200">
+          <div>
+            <span class="text-xs text-gray-500">當前溫度 / 狀態</span>
+            <div class="text-2xl font-bold text-orange-500">21°C ☀️</div>
+          </div>
+          <div>
+            <span class="text-xs text-gray-500">降雨概率 / 日落</span>
+            <div class="text-base font-bold text-sky-600">☔ 10% | 🌅 17:58</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 住宿地址 -->
+      <div class="crayon-card p-4 space-y-3">
+        <h2 class="text-2xl font-bold text-sky-700"><i class="fa-solid fa-hotel text-orange-400"></i> 預訂住宿資訊</h2>
+        
+        <div class="bg-orange-50 p-3 rounded-xl border border-orange-200 text-sm">
+          <div class="font-bold text-orange-600">🏠 10/6 - 10/9 (廣安里)</div>
+          <p class="text-xs text-gray-700 mt-1">광안해변로 235 4층(올리브영건물)</p>
+          <div class="text-xs text-gray-500 mt-1">Check-in: 15:00 | Check-out: 11:00</div>
+          <a href="https://map.naver.com/v5/search/광안해변로 235" target="_blank" class="inline-block mt-2 text-xs bg-sky-500 text-white px-2 py-1 rounded">NAVER Map 導航</a>
+        </div>
+
+        <div class="bg-sky-50 p-3 rounded-xl border border-sky-200 text-sm">
+          <div class="font-bold text-sky-600">🏨 10/9 - 10/10 (西面 SOTA SUITE)</div>
+          <p class="text-xs text-gray-700 mt-1">SOTA 套房釜山西面 / 부산진구 중앙대로 654</p>
+          <div class="text-xs text-gray-500 mt-1">Check-in: 15:00 | Check-out: 11:00</div>
+          <a href="https://map.naver.com/v5/search/부산진구 중앙대로 654" target="_blank" class="inline-block mt-2 text-xs bg-sky-500 text-white px-2 py-1 rounded">NAVER Map 導航</a>
+        </div>
+      </div>
+
+      <!-- 行程大綱總覽 -->
+      <div class="crayon-card p-4 space-y-3">
+        <div class="flex justify-between items-center">
+          <h2 class="text-2xl font-bold text-sky-700"><i class="fa-solid fa-compass text-orange-400"></i> 大綱總覽</h2>
+          <button onclick="addOverviewItem()" class="text-xs bg-orange-400 text-white px-2 py-1 rounded-full shadow">+ 新增</button>
+        </div>
+        <ul id="overview-list" class="space-y-2 text-base">
+          <!-- JS 動態渲染大綱 -->
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- 2. 行程頁 (ITINERARY) -->
+    <section id="page-itinerary" class="page-content hidden space-y-4">
+      <!-- 天數切換 Tab -->
+      <div class="flex overflow-x-auto gap-2 pb-2" id="day-tabs">
+        <!-- JS 動態產生 Day 1 ~ Day 5 按鈕 -->
+      </div>
+
+      <!-- 天數標題與新增按鈕 -->
+      <div class="flex justify-between items-center bg-white/70 p-3 rounded-xl border border-sky-200">
+        <h3 id="current-day-title" class="text-2xl font-bold text-orange-500">Day 1 行程</h3>
+        <button onclick="addItineraryItem()" class="bg-sky-500 text-white text-sm px-3 py-1 rounded-full shadow"><i class="fa-solid fa-plus"></i> 加行程</button>
+      </div>
+
+      <!-- 時間軸 Timeline -->
+      <div id="timeline-container" class="space-y-3 relative before:absolute before:inset-0 before:left-4 before:w-0.5 before:bg-sky-300">
+        <!-- JS 動態渲染行程列表 -->
+      </div>
+    </section>
+
+
+    <!-- 3. 地圖頁 (MAP) -->
+    <section id="page-map" class="page-content hidden space-y-4">
+      <div class="crayon-card p-4 text-center space-y-4">
+        <h2 class="text-2xl font-bold text-sky-700"><i class="fa-solid fa-map-location-dot text-orange-400"></i> NAVER Map 釜山專用地圖</h2>
+        <p class="text-sm text-slate-600">點擊下方按鈕可快速跳轉至 NAVER Map APP 或網頁版標記釜山行程景點！</p>
+        
+        <div class="space-y-2">
+          <a href="https://map.naver.com" target="_blank" class="block w-full py-3 bg-green-500 text-white font-bold text-lg rounded-xl shadow border-2 border-green-600">
+            <i class="fa-solid fa-location-arrow"></i> 打開 NAVER Map 搜尋
+          </a>
+        </div>
+
+        <div class="bg-orange-50 p-3 rounded-xl text-left text-xs space-y-1 border border-orange-200">
+          <div class="font-bold text-orange-600">💡 小貼士：</div>
+          <div>1. 韓國當地使用 NAVER Map 比 Google Maps 更精準！</div>
+          <div>2. 美食頁同行程頁每間餐廳均設有 NAVER 直鏈。</div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 4. 美食頁 (FOOD) -->
+    <section id="page-food" class="page-content hidden space-y-4">
+      <!-- 區域篩選 -->
+      <div class="flex gap-2 overflow-x-auto pb-1" id="food-region-filter">
+        <button onclick="filterFood('ALL')" class="food-filter-btn px-3 py-1 bg-sky-500 text-white rounded-full text-sm font-bold shadow">全部</button>
+        <button onclick="filterFood('機張')" class="food-filter-btn px-3 py-1 bg-white text-sky-600 rounded-full text-sm font-bold shadow">機張</button>
+        <button onclick="filterFood('海雲臺')" class="food-filter-btn px-3 py-1 bg-white text-sky-600 rounded-full text-sm font-bold shadow">海雲臺</button>
+        <button onclick="filterFood('西面')" class="food-filter-btn px-3 py-1 bg-white text-sky-600 rounded-full text-sm font-bold shadow">西面</button>
+      </div>
+
+      <!-- 餐廳列表 -->
+      <div id="food-list-container" class="space-y-3">
+        <!-- JS 動態渲染餐廳數據 -->
+      </div>
+    </section>
+
+
+    <!-- 5. 記帳與個人中心 (EXPENSE) -->
+    <section id="page-expense" class="page-content hidden space-y-4">
+      <!-- 匯率與換算器 -->
+      <div class="crayon-card p-4 space-y-3">
+        <h2 class="text-2xl font-bold text-sky-700"><i class="fa-solid fa-calculator text-orange-400"></i> 即時匯率計算</h2>
+        <div class="flex items-center gap-2">
+          <span class="text-sm">1 HKD ≈</span>
+          <input type="number" id="exchange-rate" value="175" onchange="updateExpenseUI()" class="w-20 p-1 border rounded text-center font-bold text-orange-500" />
+          <span class="text-sm">KRW (韓圜)</span>
+        </div>
+      </div>
+
+      <!-- 新增消費表格 -->
+      <div class="crayon-card p-4 space-y-3">
+        <h2 class="text-2xl font-bold text-sky-700"><i class="fa-solid fa-receipt text-orange-400"></i> 新增消費明細</h2>
+        <div class="space-y-2 text-sm">
+          <input type="text" id="exp-title" placeholder="項目名稱 (例如: 鮑魚粥)" class="w-full p-2 border rounded-lg" />
+          <div class="flex gap-2">
+            <input type="number" id="exp-amount" placeholder="金額" class="w-2/3 p-2 border rounded-lg" />
+            <select id="exp-currency" class="w-1/3 p-2 border rounded-lg bg-white">
+              <option value="KRW">KRW (₩)</option>
+              <option value="HKD">HKD ($)</option>
+            </select>
+          </div>
+          <div class="flex justify-between items-center pt-1">
+            <label class="font-bold text-slate-600">付款人：</label>
+            <div class="flex gap-4">
+              <label class="flex items-center gap-1 cursor-pointer"><input type="radio" name="exp-payer" value="🦖" checked /> 🦖</label>
+              <label class="flex items-center gap-1 cursor-pointer"><input type="radio" name="exp-payer" value="😼" /> 😼</label>
+            </div>
+          </div>
+          <button onclick="addExpense()" class="w-full py-2 bg-orange-400 text-white font-bold rounded-xl shadow hover:bg-orange-500">新增這筆消費</button>
+        </div>
+      </div>
+
+      <!-- 費用分攤結算 -->
+      <div class="crayon-card p-4 space-y-2 bg-amber-50/90">
+        <h3 class="text-xl font-bold text-orange-600"><i class="fa-solid fa-scale-balanced"></i> 費用平分結算</h3>
+        <div id="expense-summary" class="text-base space-y-1">
+          <!-- JS 算總帳 -->
+        </div>
+      </div>
+
+      <!-- 明細列表 -->
+      <div class="space-y-2">
+        <h3 class="text-xl font-bold text-sky-700">消費明細列表</h3>
+        <div id="expense-list" class="space-y-2">
+          <!-- JS 動態明細列表 -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bottom Navigation Bar -->
+  <nav class="fixed bottom-0 left-0 right-0 bg-white/95 border-t-2 border-sky-300 backdrop-blur-md z-50 py-2">
+    <div class="max-w-md mx-auto flex justify-around items-center">
+      <button onclick="switchTab('home')" id="tab-home" class="tab-btn active flex flex-col items-center px-3 py-1 rounded-xl text-xs font-bold text-sky-700">
+        <i class="fa-solid fa-house text-lg"></i>
+        <span>首頁</span>
+      </button>
+      <button onclick="switchTab('itinerary')" id="tab-itinerary" class="tab-btn flex flex-col items-center px-3 py-1 rounded-xl text-xs font-bold text-sky-700">
+        <i class="fa-solid fa-calendar-days text-lg"></i>
+        <span>行程</span>
+      </button>
+      <button onclick="switchTab('map')" id="tab-map" class="tab-btn flex flex-col items-center px-3 py-1 rounded-xl text-xs font-bold text-sky-700">
+        <i class="fa-solid fa-map text-lg"></i>
+        <span>地圖</span>
+      </button>
+      <button onclick="switchTab('food')" id="tab-food" class="tab-btn flex flex-col items-center px-3 py-1 rounded-xl text-xs font-bold text-sky-700">
+        <i class="fa-solid fa-utensils text-lg"></i>
+        <span>美食</span>
+      </button>
+      <button onclick="switchTab('expense')" id="tab-expense" class="tab-btn flex flex-col items-center px-3 py-1 rounded-xl text-xs font-bold text-sky-700">
+        <i class="fa-solid fa-wallet text-lg"></i>
+        <span>記帳</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- JS 邏輯腳本 -->
+  <script>
+    // --- 1. 全局數據與預設資料 ---
+    let currentDay = 1;
+
+    let overviewData = JSON.parse(localStorage.getItem('busan_overview')) || [
+      "Day 1 (6/10): 首爾KTX至釜山 -> 機張斜坡滑車 -> Club D Oasis 汗蒸幕 -> 機張市場海鮮",
+      "Day 2 (7/10): 甘川文化村 -> Flipbook -> 札嘎其市場 -> 松島纜車 -> 白淺灘",
+      "Day 3 (8/10): Shopping Day (南浦洞 & 西面購物之旅)",
+      "Day 4 (9/10): 妝造 -> 青沙浦烤海鮮 -> 16:00 膠囊列車 -> 尾浦散步採購 -> 燒肉/湯飯晚餐",
+      "Day 5 (10/10): 新世界百貨 -> 12:30 搭乘 KTX 回首爾"
+    ];
+
+    let itineraryData = JSON.parse(localStorage.getItem('busan_itinerary')) || {
+      1: [
+        { time: "12:45", title: "抵達釜山站", location: "釜山站", memo: "寄寄存行李", travelTime: "30 mins" },
+        { time: "13:30", title: "午餐: 鮑魚粥", location: "정식당 / 기장끝집", memo: "鮮甜鮑魚粥", travelTime: "20 mins" },
+        { time: "15:00", title: "Skyline Luge 斜坡滑車", location: "Skyline Luge", memo: "體驗刺激滑車", travelTime: "15 mins" },
+        { time: "17:00", title: "Club D Oasis 汗蒸幕", location: "Club D Oasis", memo: "放鬆享受海景汗蒸", travelTime: "25 mins" },
+        { time: "19:30", title: "晚餐: 機張市場食海鮮", location: "機張市場 Premium crab", memo: "吃松葉蟹與海鮮", travelTime: "—" }
+      ],
+      2: [
+        { time: "10:00", title: "甘川文化村 & Flipbook", location: "甘川文化村", memo: "小王子 Cafe 打卡及翻頁手搖書", travelTime: "20 mins" },
+        { time: "13:00", title: "札嘎其市場", location: "札嘎其市場", memo: "品嚐新鮮刺身或海鮮", travelTime: "15 mins" },
+        { time: "15:00", title: "松島纜車", location: "松島纜車", memo: "跨海纜車體驗", travelTime: "20 mins" },
+        { time: "17:00", title: "白淺灘文化村 & 海女村", location: "白淺灘文化村", memo: "海岸線散步與夕陽", travelTime: "—" }
+      ],
+      3: [
+        { time: "11:00", title: "南浦洞商圈 Shopping", location: "南浦洞", memo: "服飾、美妝採購", travelTime: "20 mins" },
+        { time: "16:00", title: "西面地下街與商圈", location: "西面", memo: "咖啡廳與潮流品牌", travelTime: "—" }
+      ],
+      4: [
+        { time: "08:30", title: "Studio Make up 化妝造型", location: " Make up Studio", memo: "預備拍照", travelTime: "15 mins" },
+        { time: "11:30", title: "青沙浦 & 午餐", location: "수민이네 / 우봉韓牛", memo: "烤海鮮/鰻魚或韓牛火鍋", travelTime: "20 mins" },
+        { time: "15:45", title: "青沙浦膠囊列車站報到", location: "青沙浦站", memo: "已預約 16:00 班次", travelTime: "45 mins" },
+        { time: "16:00", title: "天空膠囊列車 (青沙浦 -> 尾浦)", location: "尾浦站", memo: "海景拍攝！", travelTime: "15 mins" },
+        { time: "17:30", title: "尾浦下午茶 & 文創採購", location: "自然島鹽麵包 / Blue Step", memo: "買海鷗餅與周邊", travelTime: "30 mins" },
+        { time: "19:00", title: "晚餐慶祝", location: "Sammok moontak / 巨松燉排骨", memo: "美味燒肉或湯飯", travelTime: "—" }
+      ],
+      5: [
+        { time: "10:00", title: "新世界百貨 (Centum City)", location: "Centum City", memo: "最後巡禮", travelTime: "30 mins" },
+        { time: "12:30", title: "搭乘 KTX 回程首爾", location: "釜山站", memo: "準備返回首爾", travelTime: "—" }
+      ]
+    };
+
+    let foodData = [
+      { name: "정식당 (鮑魚粥)", region: "機張", tag: "熱門", address: "부산 수영구 수영로510번길 40 1층" },
+      { name: "기장끝집 죽성본점 (鮑魚粥)", region: "機張", tag: "熱門", address: "부산 기장군 기장읍 기장해안로 895 1층" },
+      { name: "Premium crab Busan 螃蟹", region: "機張", tag: "海鮮", address: "부산광역시 기장군 기장읍 차성동로 73번길 5" },
+      { name: "속씨원한대구탕 해운대점 (鱈魚湯)", region: "海雲臺", tag: "藍絲帶", address: "부산광역시 해운대구 달맞이길62번길 28" },
+      { name: "해운대암소갈비집 (燒肉)", region: "海雲臺", tag: "米芝蓮", address: "부산광역시 해운대구 해운대해변로 333" },
+      { name: "참새방앗간 (蒸海鮮/刀削麵)", region: "海雲臺", tag: "藍絲帶", address: "부산 해운대구 달맞이길62번길 50" },
+      { name: "수변최고돼지국밥", region: "海雲臺", tag: "必食豬肉湯飯", address: "부산 해운대구 구남로 39" },
+      { name: "수민이네 (烤海鮮烤鰻魚)", region: "海雲臺", tag: "海鮮", address: "부산 해운대구 청사포로58번길 118" },
+      { name: "본가제일면가 (水冷麵)", region: "西面", tag: "藍絲帶", address: "부산 수영구 남천동로108번길 11" },
+      { name: "이재모피자 전포점 (披薩)", region: "西面", tag: "超人氣", address: "부산광역시 부산진구 中央대로691번길 5" },
+      { name: "83해치 83獬豸 (熟成豬燒肉)", region: "西面", tag: "必食燒肉", address: "부산 수영구 민락본동로19번길 59 1층" }
+    ];
+
+    let expenseData = JSON.parse(localStorage.getItem('busan_expense')) || [];
+
+    // --- 2. Tab 切換與初始化 ---
+    function switchTab(tabName) {
+      document.querySelectorAll('.page-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+      
+      document.getElementById(`page-${tabName}`).classList.remove('hidden');
+      document.getElementById(`tab-${tabName}`).classList.add('active');
+    }
+
+    // --- 3. 首頁邏輯 ---
+    function renderOverview() {
+      const container = document.getElementById('overview-list');
+      container.innerHTML = '';
+      overviewData.forEach((item, index) => {
+        container.innerHTML += `
+          <li class="flex justify-between items-center bg-white/80 p-2.5 rounded-xl border border-sky-100 shadow-sm">
+            <span class="text-gray-800">${item}</span>
+            <button onclick="deleteOverview(${index})" class="text-rose-400 hover:text-rose-600 px-2"><i class="fa-solid fa-trash"></i></button>
+          </li>
+        `;
+      });
+    }
+
+    function addOverviewItem() {
+      const text = prompt("請輸入新增的大綱項目:");
+      if (text) {
+        overviewData.push(text);
+        saveAndRenderOverview();
+      }
+    }
+
+    function deleteOverview(index) {
+      overviewData.splice(index, 1);
+      saveAndRenderOverview();
+    }
+
+    function saveAndRenderOverview() {
+      localStorage.setItem('busan_overview', JSON.stringify(overviewData));
+      renderOverview();
+    }
+
+    // --- 4. 行程頁邏輯 ---
+    function renderDayTabs() {
+      const container = document.getElementById('day-tabs');
+      container.innerHTML = '';
+      for (let i = 1; i <= 5; i++) {
+        const isActive = i === currentDay ? 'bg-orange-400 text-white shadow-md' : 'bg-white text-sky-600';
+        container.innerHTML += `
+          <button onclick="changeDay(${i})" class="px-4 py-1.5 rounded-full text-sm font-bold whitespace-nowrap ${isActive}">
+            Day ${i}
+          </button>
+        `;
+      }
+    }
+
+    function changeDay(day) {
+      currentDay = day;
+      renderDayTabs();
+      renderItinerary();
+    }
+
+    function renderItinerary() {
+      document.getElementById('current-day-title').innerText = `Day ${currentDay} 行程`;
+      const container = document.getElementById('timeline-container');
+      container.innerHTML = '';
+      const items = itineraryData[currentDay] || [];
+
+      items.forEach((item, idx) => {
+        const mapUrl = `https://map.naver.com/v5/search/${encodeURIComponent(item.location)}`;
+        container.innerHTML += `
+          <div class="relative pl-8 pr-2 py-2 group">
+            <!-- Timeline Dot -->
+            <div class="absolute left-2.5 top-5 w-3.5 h-3.5 bg-orange-400 rounded-full border-2 border-white shadow"></div>
+            
+            <div class="crayon-card p-3 space-y-2">
+              <div class="flex justify-between items-start">
+                <input type="time" value="${item.time}" onchange="updateItinerary(${idx}, 'time', this.value)" class="font-bold text-orange-600 bg-transparent text-lg" />
+                <button onclick="deleteItinerary(${idx})" class="text-rose-400 text-xs px-2 py-1"><i class="fa-solid fa-xmark text-base"></i></button>
+              </div>
+
+              <input type="text" value="${item.title}" onchange="updateItinerary(${idx}, 'title', this.value)" class="w-full font-bold text-gray-800 bg-transparent text-base border-b border-dashed border-gray-300" placeholder="行程名稱" />
+
+              <div class="flex justify-between items-center text-xs text-gray-600 pt-1">
+                <input type="text" value="${item.location}" onchange="updateItinerary(${idx}, 'location', this.value)" class="bg-transparent w-2/3" placeholder="地點" />
+                <a href="${mapUrl}" target="_blank" class="text-sky-600 underline font-bold"><i class="fa-solid fa-map-pin"></i> 地圖</a>
+              </div>
+
+              <input type="text" value="${item.memo || ''}" onchange="updateItinerary(${idx}, 'memo', this.value)" class="w-full text-xs text-slate-500 bg-transparent" placeholder="新增備註..." />
+
+              ${item.travelTime ? `
+                <div class="mt-2 text-right">
+                  <span class="text-[10px] bg-sky-100 text-sky-700 px-2 py-0.5 rounded-full"><i class="fa-solid fa-person-walking"></i> 下一站建議通勤: ${item.travelTime}</span>
+                </div>
+              ` : ''}
+            </div>
+          </div>
+        `;
+      });
+    }
+
+    function addItineraryItem() {
+      if (!itineraryData[currentDay]) itineraryData[currentDay] = [];
+      itineraryData[currentDay].push({ time: "12:00", title: "新行程", location: "釜山", memo: "", travelTime: "15 mins" });
+      saveAndRenderItinerary();
+    }
+
+    function updateItinerary(idx, field, value) {
+      itineraryData[currentDay][idx][field] = value;
+      saveAndRenderItinerary();
+    }
+
+    function deleteItinerary(idx) {
+      itineraryData[currentDay].splice(idx, 1);
+      saveAndRenderItinerary();
+    }
+
+    function saveAndRenderItinerary() {
+      localStorage.setItem('busan_itinerary', JSON.stringify(itineraryData));
+      renderItinerary();
+    }
+
+    // --- 5. 美食頁邏輯 ---
+    function renderFood(filter = 'ALL') {
+      const container = document.getElementById('food-list-container');
+      container.innerHTML = '';
+      
+      const list = filter === 'ALL' ? foodData : foodData.filter(f => f.region === filter);
+
+      list.forEach(item => {
+        const navUrl = `https://map.naver.com/v5/search/${encodeURIComponent(item.address)}`;
+        container.innerHTML += `
+          <div class="crayon-card p-3 flex justify-between items-center">
+            <div class="space-y-1">
+              <div class="flex items-center gap-2">
+                <span class="font-bold text-gray-800 text-base">${item.name}</span>
+                <span class="text-[10px] bg-orange-100 text-orange-600 px-1.5 py-0.5 rounded-full">${item.tag}</span>
+              </div>
+              <div class="text-xs text-gray-500"><i class="fa-solid fa-location-dot text-sky-500"></i> ${item.region} | ${item.address}</div>
+            </div>
+            <a href="${navUrl}" target="_blank" class="bg-green-500 text-white px-3 py-1.5 rounded-xl text-xs font-bold shadow flex items-center gap-1">
+              <i class="fa-solid fa-compass"></i> 導航
+            </a>
+          </div>
+        `;
+      });
+    }
+
+    function filterFood(region) {
+      renderFood(region);
+    }
+
+    // --- 6. 記帳邏輯 ---
+    function addExpense() {
+      const title = document.getElementById('exp-title').value;
+      const amount = parseFloat(document.getElementById('exp-amount').value);
+      const currency = document.getElementById('exp-currency').value;
+      const payer = document.querySelector('input[name="exp-payer"]:checked').value;
+
+      if (!title || isNaN(amount)) {
+        alert("請輸入有效的項目名稱與金額！");
+        return;
+      }
+
+      expenseData.push({ id: Date.now(), title, amount, currency, payer });
+      localStorage.setItem('busan_expense', JSON.stringify(expenseData));
+      
+      document.getElementById('exp-title').value = '';
+      document.getElementById('exp-amount').value = '';
+      updateExpenseUI();
+    }
+
+    function deleteExpense(id) {
+      expenseData = expenseData.filter(e => e.id !== id);
+      localStorage.setItem('busan_expense', JSON.stringify(expenseData));
+      updateExpenseUI();
+    }
+
+    function updateExpenseUI() {
+      const rate = parseFloat(document.getElementById('exchange-rate').value) || 175;
+      const container = document.getElementById('expense-list');
+      const summaryContainer = document.getElementById('expense-summary');
+      container.innerHTML = '';
+
+      let totalKRW = 0;
+      let payerTotals = { "🦖": 0, "😼": 0 }; // 換算成 KRW 計算
+
+      expenseData.forEach(item => {
+        const itemKRW = item.currency === 'HKD' ? item.amount * rate : item.amount;
+        totalKRW += itemKRW;
+        payerTotals[item.payer] += itemKRW;
+
+        container.innerHTML += `
+          <div class="bg-white/80 p-3 rounded-xl border border-sky-100 flex justify-between items-center text-sm">
+            <div>
+              <div class="font-bold text-gray-800">${item.title} <span class="text-xs font-normal text-sky-600">(${item.payer} 付款)</span></div>
+              <div class="text-xs text-gray-500">${item.amount} ${item.currency} ≈ ₩${Math.round(itemKRW).toLocaleString()}</div>
+            </div>
+            <button onclick="deleteExpense(${item.id})" class="text-rose-400 hover:text-rose-600 px-2"><i class="fa-solid fa-trash"></i></button>
+          </div>
+        `;
+      });
+
+      const perPersonKRW = totalKRW / 2;
+      const diff1 = payerTotals["🦖"] - perPersonKRW; // 正數代表多付，負數代表少付
+
+      let settlementText = '';
+      if (diff1 > 0) {
+        settlementText = `😼 需給 🦖 <b>₩${Math.round(diff1).toLocaleString()}</b> (約 HKD $${(diff1 / rate).toFixed(1)})`;
+      } else if (diff1 < 0) {
+        settlementText = `🦖 需給 😼 <b>₩${Math.round(Math.abs(diff1)).toLocaleString()}</b> (約 HKD $${(Math.abs(diff1) / rate).toFixed(1)})`;
+      } else {
+        settlementText = `兩位付款完全平衡，無需補差額！`;
+      }
+
+      summaryContainer.innerHTML = `
+        <div>總消費：<b>₩${Math.round(totalKRW).toLocaleString()}</b> (每人 ₩${Math.round(perPersonKRW).toLocaleString()})</div>
+        <div class="text-sm font-bold text-sky-700 mt-1">${settlementText}</div>
+      `;
+    }
+
+    // --- 頁面初始化 ---
+    window.onload = function() {
+      renderOverview();
+      renderDayTabs();
+      renderItinerary();
+      renderFood();
+      updateExpenseUI();
+    };
+  </script>
+</body>
+</html>
